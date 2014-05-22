@@ -1,0 +1,19 @@
+{
+    "name": "bilibili插件",
+    "description": "1、可以在点击图片时，直接进入对应网站的播放页面
+2、自定义屏蔽动漫
+http://www.bilibili.tv/video/bgm_calendar.html",
+    "version": "1.0",
+    "browser_action": {
+        "default_title": "Set this page's color.",
+        "default_icon": "icon.png",
+        "default_popup": "popup.html"
+    },
+    "permissions": ["tabs", "http://*/*", "https://*/*", "webRequest", "webRequestBlocking", "contextMenus"],
+    "background": {
+        "matches": ["http://www.bilibili.tv/video/bgm_calendar.html"],
+        "scripts": ["background.js"],
+        "run_at": "document_end"
+    },
+    "manifest_version": 2
+}
